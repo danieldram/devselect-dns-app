@@ -1,4 +1,4 @@
-Devselect Demo DNS Management App - ASP.NET6 w/EntityFramework 6
+# Devselect Demo DNS Management App - ASP.NET6 w/EntityFramework 6
 
 ![screenshot](https://github.com/danieldram/devselect-dns-app/blob/master/screenshot.png?raw=true)
 
