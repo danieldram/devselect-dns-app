@@ -46,7 +46,7 @@ namespace test_net_app.Controllers
         }
 
         // GET: DNSRecord/Create
-        public IActionResult Create()
+        public IActionResult Create(int ZoneId, string Name)
         {
             return View();
         }

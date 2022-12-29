@@ -29,12 +29,19 @@
             </div>
             <div class="form-group">
                 <label asp-for="RecordClass" class="control-label"></label>
-                <input asp-for="RecordClass" class="form-control" />
+                <select asp-for="RecordClass" class="form-control">
+                    <option value="A">IN</option>
+                </select>
                 <span asp-validation-for="RecordClass" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="RecordType" class="control-label"></label>
-                <input asp-for="RecordType" class="form-control" />
+                <select asp-for="RecordType" class="form-control">
+                    <option value="A">A</option>
+                    <option value="AAAA">AAAA</option>
+                    <option value="CNAME">CNAME</option>
+                    <option value="TXT">TXT</option>
+                </select>
                 <span asp-validation-for="RecordType" class="text-danger"></span>
             </div>
             <div class="form-group">

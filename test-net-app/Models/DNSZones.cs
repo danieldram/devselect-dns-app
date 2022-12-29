@@ -37,18 +37,22 @@ public class DNSZones
 
     [Required]
     [DisplayName("Nameserver 1")]
+    [RegularExpression(@"[0-9aA-zZ]+\.[0-9aA-zZ]+\.[0-9aA-zZ]+", ErrorMessage = "Invalid format for nameserver")]
     public string NS1 { get; set; } = "";
 
     [Required]
     [DisplayName("Nameserver 2")]
+    [RegularExpression(@"[0-9aA-zZ]+\.[0-9aA-zZ]+\.[0-9aA-zZ]+", ErrorMessage = "Invalid format for nameserver")]
     public string NS2 { get; set; } = "";
 
     [Required]
     [DisplayName("Nameserver 3")]
+    [RegularExpression(@"[0-9aA-zZ]+\.[0-9aA-zZ]+\.[0-9aA-zZ]+", ErrorMessage = "Invalid format for nameserver")]
     public string NS3 { get; set; } = "";
 
     [Required]
     [DisplayName("Nameserver 4")]
+    [RegularExpression(@"[0-9aA-zZ]+\.[0-9aA-zZ]+\.[0-9aA-zZ]+", ErrorMessage = "Invalid format for nameserver")]
     public string NS4 { get; set; } = "";
 
 }

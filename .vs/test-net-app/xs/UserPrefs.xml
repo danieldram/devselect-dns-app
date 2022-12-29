@@ -1,22 +1,25 @@
 ﻿<Properties StartupConfiguration="{262F8EA3-D660-4082-A3A4-6D6BEA108E3E}|Default" NuGet.AddPackagesDialog.IncludePrerelease="True">
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.ItemProperties.test-net-app PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="test-net-app/Program.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="test-net-app/Controllers/DNSRecord.cs">
     <Files>
-      <File FileName="test-net-app/Data/AppDBContext.cs" />
+      <File FileName="test-net-app/Data/AppDBContext.cs" Line="1" Column="1" />
       <File FileName="test-net-app/Models/WtfModel.cs" />
-      <File FileName="test-net-app/Controllers/DNSRecord.cs" />
-      <File FileName="test-net-app/Migrations/20221229025604_dnsrecords.cs" Line="32" Column="1" />
-      <File FileName="test-net-app/Models/DNSRecords.cs" Line="15" Column="43" />
-      <File FileName="test-net-app/Migrations/20221228204601_blank.cs" Line="1" Column="1" />
-      <File FileName="test-net-app/Migrations/20221229030724_dnsrecordupdate.cs" Line="16" Column="34" />
-      <File FileName="test-net-app/Migrations/20221224194753_updateCategoriesModel.cs" Line="1" Column="1" />
-      <File FileName="test-net-app/Migrations/20221228093458_DNSModelToDb.cs" Line="1" Column="1" />
-      <File FileName="test-net-app/Migrations/20221228175338_DNSModelsToDB.cs" Line="1" Column="1" />
-      <File FileName="test-net-app/Migrations/20221219071610_addCategoriesModelToDb.cs" Line="25" Column="20" />
-      <File FileName="test-net-app/Controllers/HomeController.cs" Line="1" Column="1" />
-      <File FileName="test-net-app/Controllers/DNSZone.cs" Line="1" Column="1" />
+      <File FileName="test-net-app/Controllers/DNSRecord.cs" Line="140" Column="41" />
+      <File FileName="test-net-app/Migrations/20221229025604_dnsrecords.cs" />
+      <File FileName="test-net-app/Models/DNSRecords.cs" Line="12" Column="1" />
+      <File FileName="test-net-app/Migrations/20221228204601_blank.cs" />
+      <File FileName="test-net-app/Migrations/20221229030724_dnsrecordupdate.cs" />
+      <File FileName="test-net-app/Migrations/20221224194753_updateCategoriesModel.cs" />
+      <File FileName="test-net-app/Migrations/20221228093458_DNSModelToDb.cs" />
+      <File FileName="test-net-app/Migrations/20221228175338_DNSModelsToDB.cs" />
+      <File FileName="test-net-app/Migrations/20221219071610_addCategoriesModelToDb.cs" />
+      <File FileName="test-net-app/Controllers/HomeController.cs" />
+      <File FileName="test-net-app/Controllers/DNSZone.cs" />
       <File FileName="test-net-app/Program.cs" Line="23" Column="22" />
+      <File FileName="test-net-app/Models/DNSZones.cs" Line="34" Column="1" />
+      <File FileName="test-net-app/Views/DNSZone/Index.cshtml" Line="98" Column="124" />
+      <File FileName="test-net-app/Views/DNSRecord/Create.cshtml" Line="34" Column="26" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -24,9 +27,10 @@
           <Node name="test-net-app" expanded="True">
             <Node name="test-net-app" expanded="True">
               <Node name="Dependencies" expanded="True" />
-              <Node name="Controllers" expanded="True" />
+              <Node name="Controllers" expanded="True">
+                <Node name="DNSRecord.cs" selected="True" />
+              </Node>
               <Node name="Data" expanded="True" />
-              <Node name="Migrations" expanded="True" />
               <Node name="Models" expanded="True" />
               <Node name="Properties" expanded="True" />
               <Node name="Views" expanded="True">
@@ -42,7 +46,6 @@
                 <Node name="css" expanded="True" />
               </Node>
               <Node name="appsettings.json" expanded="True" />
-              <Node name="Program.cs" selected="True" />
             </Node>
           </Node>
         </State>
