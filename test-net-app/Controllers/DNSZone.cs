@@ -58,6 +58,13 @@ namespace test_net_app.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,Doamin,IP,Email,TTL,Refresh,Retry,Expire,MTTL,NS1,NS2,NS3,NS4")] DNSZones dNSZones)
         {
+            var DomainExists = _context.DNSZones.Where(zone => zone.Doamin == dNSZones.Doamin).Count() > 0;
+
+            if (DomainExists)
+            {
+                TempData["Error"] = "Domain already exists.";
+                return RedirectToAction(nameof(Index));
+            }
             if (ModelState.IsValid)
             {
                 _context.Add(dNSZones);
@@ -148,6 +155,7 @@ namespace test_net_app.Controllers
             var dNSZones = await _context.DNSZones.FindAsync(id);
             if (dNSZones != null)
             {
+                _context.DNSRecords.RemoveRange(_context.DNSRecords.Where(record => record.ZoneId == id));
                 _context.DNSZones.Remove(dNSZones);
             }
             

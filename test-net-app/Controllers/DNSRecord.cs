@@ -36,7 +36,7 @@ namespace test_net_app.Controllers
             }
 
             var dNSRecords = await _context.DNSRecords
-                .FirstOrDefaultAsync(m => m.Id == id);
+                .FirstOrDefaultAsync(m => m.ZoneId == id);
             if (dNSRecords == null)
             {
                 return NotFound();
@@ -58,6 +58,12 @@ namespace test_net_app.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,ZoneId,Name,TTL,RecordClass,RecordType,RecordData")] DNSRecords dNSRecords)
         {
+            var hasTooMany = _context.DNSRecords.Where(record => record.ZoneId == dNSRecords.ZoneId).Count() >= 10;
+            if (hasTooMany)
+            {
+                TempData["Error"] = "There are too many records for this zone.";
+                return RedirectToAction("Index", new {controller="DNSZone", action="Index"});
+            }
             if (ModelState.IsValid)
             {
                 _context.Add(dNSRecords);

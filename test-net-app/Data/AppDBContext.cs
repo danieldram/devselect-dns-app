@@ -9,9 +9,7 @@ public class AppDBContext :DbContext
 	public AppDBContext(DbContextOptions<AppDBContext> options) : base(options)
 	{
 	}
-	public DbSet<CategoryModel> Categories { get; set; }
 	public DbSet<test_net_app.Models.DNSZones>? DNSZones { get; set; }
-	public DbSet<test_net_app.Models.WtfModel>? WtfModel { get; set; }
 	public DbSet<test_net_app.Models.DNSRecords>? DNSRecords { get; set; }
 }
 

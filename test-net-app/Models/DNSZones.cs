@@ -11,47 +11,50 @@ public class DNSZones
     public int Id { get; set; }
 
     [Required]
+    [RegularExpression(@"[0-9aA-zZ]+\.[0-9aA-zZ]+", ErrorMessage = "Invalid format for domain")]
     public string Doamin { get; set; } = "";
 
     [Required]
-    [DisplayName("IP Address (IP4)")]
+    [RegularExpression(@"[0-9aA-zZ]+\.[0-9aA-zZ]+\.[0-9aA-zZ]+\.[0-9aA-zZ]", ErrorMessage = "Invalid format for IP address")]
+    [DisplayName("IP(4)")]
     public string IP { get; set; } = "";
 
     [Required]
+    [RegularExpression(@"[0-9aA-zZ]+@[0-9aA-zZ]+\.[0-9aA-zZ]+", ErrorMessage = "Invalid format for email")]
     public string Email { get; set; } = "";
 
-    [DisplayName("Time To Live")]
-    public string TTL { get; set; } = "";
+    [DisplayName("TTL")]
+    public int TTL { get; set; } = 60;
 
-    [DisplayName("Time To Refresh")]
+    [DisplayName("Refresh")]
     public int Refresh { get; set; } = 60;
 
-    [DisplayName("Time To Retry")]
+    [DisplayName("Retry")]
     public int Retry { get; set; } = 60;
 
-    [DisplayName("Time To Expire")]
+    [DisplayName("Expire")]
     public int Expire { get; set; } = 60;
 
-    [DisplayName("Minimum Time To Live")]
+    [DisplayName("Minimum TTL")]
     public int MTTL { get; set; } = 60;
 
     [Required]
-    [DisplayName("Nameserver 1")]
+    [DisplayName("NS1")]
     [RegularExpression(@"[0-9aA-zZ]+\.[0-9aA-zZ]+\.[0-9aA-zZ]+", ErrorMessage = "Invalid format for nameserver")]
     public string NS1 { get; set; } = "";
 
     [Required]
-    [DisplayName("Nameserver 2")]
+    [DisplayName("NS2")]
     [RegularExpression(@"[0-9aA-zZ]+\.[0-9aA-zZ]+\.[0-9aA-zZ]+", ErrorMessage = "Invalid format for nameserver")]
     public string NS2 { get; set; } = "";
 
     [Required]
-    [DisplayName("Nameserver 3")]
+    [DisplayName("NS3")]
     [RegularExpression(@"[0-9aA-zZ]+\.[0-9aA-zZ]+\.[0-9aA-zZ]+", ErrorMessage = "Invalid format for nameserver")]
     public string NS3 { get; set; } = "";
 
     [Required]
-    [DisplayName("Nameserver 4")]
+    [DisplayName("NS4")]
     [RegularExpression(@"[0-9aA-zZ]+\.[0-9aA-zZ]+\.[0-9aA-zZ]+", ErrorMessage = "Invalid format for nameserver")]
     public string NS4 { get; set; } = "";
 
