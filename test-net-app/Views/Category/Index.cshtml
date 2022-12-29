@@ -1,0 +1,22 @@
+﻿@model IEnumerable<CategoryModel>   
+@{
+    ViewData["Title"] = "Category Page";
+}
+
+<div class="text-center">
+   Category Page
+</div>
+<div>
+    @foreach(var category in Model)
+    {
+        <p>
+            @category.Name
+        </p>
+        <a asp-controller="Category" asp-action="Edit" asp-route-id="@category.Id"> Edit </a>
+    }
+
+    <a asp-controller="Category" asp-action="Create" class="btn btn-primary">
+        Create new category
+    </a>
+</div>
+

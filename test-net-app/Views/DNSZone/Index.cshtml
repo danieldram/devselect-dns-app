@@ -1,0 +1,103 @@
+@model IEnumerable<test_net_app.Models.DNSZones>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Doamin)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IP)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TTL)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Refresh)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Retry)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Expire)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MTTL)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NS1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NS2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NS3)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NS4)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Doamin)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IP)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TTL)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Refresh)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Retry)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Expire)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MTTL)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NS1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NS2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NS3)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NS4)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>|
+                <a asp-controller="DNSRecord" asp-action="Details" asp-route-id="@item.Id">View Records</a> |
+                <a asp-controller="DNSRecord" asp-action="Create" asp-route-ZoneId="@item.Id" asp-route-Name="@item.Doamin">Create Record</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

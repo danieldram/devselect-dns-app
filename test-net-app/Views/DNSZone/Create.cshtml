@@ -1,0 +1,88 @@
+@model test_net_app.Models.DNSZones
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>DNSZones</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Doamin" class="control-label"></label>
+                <input asp-for="Doamin" class="form-control" />
+                <span asp-validation-for="Doamin" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IP" class="control-label"></label>
+                <input asp-for="IP" class="form-control" />
+                <span asp-validation-for="IP" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Email" class="control-label"></label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TTL" class="control-label"></label>
+                <input asp-for="TTL" class="form-control" />
+                <span asp-validation-for="TTL" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Refresh" class="control-label"></label>
+                <input asp-for="Refresh" class="form-control" />
+                <span asp-validation-for="Refresh" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Retry" class="control-label"></label>
+                <input asp-for="Retry" class="form-control" />
+                <span asp-validation-for="Retry" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Expire" class="control-label"></label>
+                <input asp-for="Expire" class="form-control" />
+                <span asp-validation-for="Expire" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MTTL" class="control-label"></label>
+                <input asp-for="MTTL" class="form-control" />
+                <span asp-validation-for="MTTL" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NS1" class="control-label"></label>
+                <input asp-for="NS1" class="form-control" />
+                <span asp-validation-for="NS1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NS2" class="control-label"></label>
+                <input asp-for="NS2" class="form-control" />
+                <span asp-validation-for="NS2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NS3" class="control-label"></label>
+                <input asp-for="NS3" class="form-control" />
+                <span asp-validation-for="NS3" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NS4" class="control-label"></label>
+                <input asp-for="NS4" class="form-control" />
+                <span asp-validation-for="NS4" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
